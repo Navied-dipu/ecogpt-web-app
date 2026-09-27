@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    @apply scroll-smooth;
+  }
+
+  :root {
+    --background: #ffffff;
+    --foreground: #111827;
+    --border: #e5e7eb;
+    --input: #e5e7eb;
+    --primary: #0284c7;
+    --primary-foreground: #ffffff;
+    --secondary: #f3f4f6;
+    --secondary-foreground: #111827;
+    --muted: #f3f4f6;
+    --muted-foreground: #6b7280;
+    --accent: #f3f4f6;
+    --accent-foreground: #111827;
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: #1e293b;
+    --foreground: #f1f5f9;
+    --border: #334159;
+    --input: #334159;
+    --primary: #0ea5e0;
+    --primary-foreground: #0f172a;
+    --secondary: #1e293b;
+    --secondary-foreground: #f1f5f9;
+    --muted: #334159;
+    --muted-foreground: #9ca3af;
+    --accent: #334159;
+    --accent-foreground: #f1f5f9;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
